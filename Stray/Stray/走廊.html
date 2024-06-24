@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>走廊</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1024px;
+            height: 768px;
+            background-image: url('走廊.jpg');
+            background-size:80% auto;
+            background-position: var(--bg-x, center) var(--bg-y, center);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .button4 {
+            width: 160px;
+            height: 350px;
+            top: 200px;
+            right: 250px;
+            cursor: pointer;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .black-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1000;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="black-screen" id="black-screen"></div>
+    <button class="button4" onclick="redirectToNewPage()"></button>
+
+    <script>
+        function redirectToNewPage() {
+            window.location.href = 'aunthouse.html';
+        }
+    </script>
+</body>
+</html>

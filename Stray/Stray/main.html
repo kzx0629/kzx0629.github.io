@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>客厅</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        width: 1024px;
+        height: 768px;
+        background-image: url('livingroom.jpg');
+        background-size: cover;
+        background-position: var(--bg-x, center) var(--bg-y, center);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+
+    .button1 {
+        position: absolute;
+        top: 43%;
+        left: 100px;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0);
+        color: black;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 150px;
+        height: 400px;
+        border: none;
+    }
+
+    .button2 {
+        position: absolute;
+        top: 43%;
+        left: 64%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0);
+        padding: 10px 20px;
+        cursor: pointer;
+        width: 150px;
+        height: 400px;
+    }
+
+    .button3 {
+        width: 350px;
+        height: 200px;
+        top: 400px;
+        left: 420px;
+        cursor: help;
+    }
+
+    .button4 {
+        width: 160px;
+        height: 350px;
+        top: 200px;
+        left: 750px;
+        cursor: help;
+    }
+
+    .button5 {
+        width: 250px;
+        height: 200px;
+        top: 80%;
+        left: 75%;
+        cursor: help;
+    }
+
+    .button6 {
+        width: 270px;
+        height: 220px;
+        top: 40%;
+        left: 75%;
+        cursor: help;
+    }
+
+
+
+    button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        border-radius: 5px;
+    }
+
+
+
+
+    .black-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1000;
+        transition: opacity 0.3s;
+    }
+    </style>
+  </head>
+  <body>
+
+
+    <!-- 浴室门 -->
+    </div>
+    <a href="bathroom.html" class="button1"></a>
+    <div class="black-screen" id="black-screen"></div>
+    <!-- 房间门
+
+  </div>
+  <a href="room.html" class="button2">房间</a>
+  <div class="black-screen" id="black-screen"></div>
+
+
+
+   -->
+
+
+    <button class="button button3" onclick="showPopup('破旧的沙发')"></button>
+    <button class="button button4" onclick="showPopup('树叶发出沙沙的响声')"></button>
+    <button class="button button5" onclick="showPopup('出去的门被锁住了，需要找到*钥匙*')"></button>
+    <button class="button button6" onclick="showPopup('好黑。。。想去拿上面的手电筒，但是柜子太高了，够不到。。。怎么办')"></button>
+
+
+
+    <script>
+
+
+    function showPopup(message) {
+    alert(message);
+}
+
+    function shakeBackground() {
+        const body = document.body;
+        const shakeTimes = 15;
+        const shakeDuration = 4000 / shakeTimes;
+        let count = 0;
+
+        function shake() {
+            if (count >= shakeTimes) {
+                body.style.setProperty('--bg-x', 'center');
+                body.style.setProperty('--bg-y', 'center');
+                return;
+            }
+
+            const x = Math.random() * 60 - 60;
+            const y = Math.random() * 100 - 100;
+            body.style.setProperty('--bg-x', `calc(50% + ${x}px)`);
+            body.style.setProperty('--bg-y', `calc(50% + ${y}px)`);
+            count++;
+            setTimeout(shake, shakeDuration);
+        }
+
+        shake();
+    }
+
+    function blackScreenEffect() {
+        const blackScreen = document.getElementById('black-screen');
+        let count = 0;
+
+        function toggleBlackScreen() {
+            if (count >= 5) {
+                blackScreen.style.opacity = 0;
+                return;
+            }
+
+            blackScreen.style.opacity = 1;
+            setTimeout(() => {
+                blackScreen.style.opacity = 0;
+            }, 100);
+
+            count++;
+            setTimeout(toggleBlackScreen, 500);
+        }
+
+        toggleBlackScreen();
+    }
+
+    window.onload = function() {
+        shakeBackground();
+        blackScreenEffect();
+    };
+    </script>
+  </body>
+</html>

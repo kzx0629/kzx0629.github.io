@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>女儿房间</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('女儿房间.jpg');
+        background-size: 70% auto;
+        background-position: var(--bg-x, center) var(--bg-y, center);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .content {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .button1 {
+        position: absolute;
+        top: 41%;
+        right: 23%;
+        background-color: rgba(255, 255, 255, 0);
+        color: black;
+        padding: 10px 20px;
+        text-decoration: none;
+        border: 2px solid transparent;
+        border-radius: 50px;
+        cursor: pointer;
+        width: 80px;
+        height:80px;
+            }
+
+      .button2 {
+        position: absolute;
+        top: 69.5%;
+        left: 75%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0);
+        color: black;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 60px;
+        height: 56px;
+          }
+
+      .button3 {
+          position: absolute;
+          top: 36.5%;
+          left: 43%;
+          transform: translateY(-50%);
+          background-color: rgba(255, 255, 255, 0);
+          color: black;
+          padding: 10px 20px;
+          text-decoration: none;
+          border-radius: 60px;
+          border:none;
+          cursor: pointer;
+          width: 200px;
+          height: 150px;
+              }
+
+      #myText {
+          display: none;
+          position: absolute;
+          top: 23%;
+          left: 44%;
+              }
+
+              /* 模态弹窗样式 */
+              .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 2;
+                top: 2;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0,0,0,0.0);
+              }
+
+              /* 模态弹窗内容样式 */
+              .modal-content {
+                background-color: #f9f9f9;
+                margin: 30% auto;
+                padding: 10px;
+                border: 1px solid #888;
+                border-radius: 10px;
+                width: 30%;
+                height:15%;
+              }
+              /* 关闭按钮样式 */
+              .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+              }
+              .close:hover,
+              .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+              }
+
+              .dialog {
+                     display: none;
+                     position: fixed;
+                     top: 88%;
+                     left: 50%;
+                     transform: translate(-50%, -50%);
+                     padding: 20px;
+                     background-color: #f0f0f0;
+                     border: 2px solid #000;
+                     border-radius: 10px;
+                     border-color: white;
+                     z-index: 1000;
+                 }
+
+              .button4 {
+                    position: absolute;
+                    top: 50%;
+                    left:26%;
+                    background-color: rgba(255, 255, 255, 0);
+                    color: black;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    border: 2px solid transparent;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    width: 90px;
+                    height: 108px;
+                }
+
+                .confirm-button {
+                          position: absolute;
+                          bottom: 10px;
+                          right: 10px;
+                        }
+
+
+                /* 初始时隐藏图片弹窗 */
+                #imageModal {
+                  display: none;
+                  position: fixed;
+                  z-index: 1;
+                  left: 0;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  overflow: auto;
+                  background-color: rgba(0, 0, 0, 0);
+
+                }
+
+                #imageModal-content {
+                  background-color: rgba(255, 255, 255, 0.5);
+                  margin: 10% auto; /
+                  padding: 10px;
+                  max-width: 40%;
+                  max-height: 50%;
+                }
+
+                /* 图片样式 */
+              #imageModal-content img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                display: block;
+                margin: auto;
+              }
+
+                /* 关闭按钮样式 */
+                #close {
+                  color: #aaa;
+                  float: right;
+                  font-size: 28px;
+                  font-weight: bold;
+                  cursor: pointer;
+                }
+
+                #close:hover,
+                #close:focus {
+                  color: black;
+                  text-decoration: none;
+                  cursor: pointer;
+                }
+
+                .button5 {
+                      position: absolute;
+                      top: 36%;
+                      left:37.5%;
+                      background-color: rgba(255, 255, 255, 0);
+                      color: black;
+                      padding: 10px 20px;
+                      text-decoration: none;
+                      border: 2px solid transparent;
+                      border-radius: 2px;
+                      cursor: pointer;
+                      width: 60px;
+                      height: 60px;
+                  }
+
+                  #imageModal1 {
+                      display: none;
+                      position: fixed;
+                      z-index: 1;
+                      padding-top: 100px;
+                      left: 0;
+                      top: 0;
+                      width: 100%;
+                      height: 100%;
+                      overflow: auto;
+                      background-color: rgb(0,0,0);
+                      background-color: rgba(0,0,0,0.4);
+                  }
+
+                  #imageModalContent1 {
+                      background-color: #fefefe;
+                      margin: auto;
+                      padding: 20px;
+                      border: 1px solid #888;
+                      width: 80%;
+                      max-width: 600px;
+                      text-align: center;
+                  }
+
+                  #closeModal1 {
+                      color: #aaaaaa;
+                      float: right;
+                      font-size: 28px;
+                      font-weight: bold;
+                      cursor: pointer;
+                  }
+
+                  #closeModal1:hover,
+                  #closeModal1:focus {
+                      color: #000;
+                      text-decoration: none;
+                      cursor: pointer;
+                  }
+
+                  #myImage1 {
+                      max-width: 100%;
+                      height: auto;
+                  }
+
+                  .button6 {
+                        position: absolute;
+                        top: 77%;
+                        left:45%;
+                        background-color: rgba(255, 255, 255, 0);
+                        color: black;
+                        padding: 10px 20px;
+                        text-decoration: none;
+                        border: 2px solid transparent;
+                        border-radius: 2px;
+                        cursor: pointer;
+                        width: 60px;
+                        height: 60px;
+                    }
+    </style>
+    </head>
+    <body id="body">
+      <button id="playAudioBtn" class="button1"></button>
+
+      <audio id="myAudio" style="display: none;" controls>
+          <source src="女儿录音.mp3" type="audio/mpeg">
+      </audio>
+
+
+      <script>
+          document.getElementById('playAudioBtn').addEventListener('click', function() {
+              var audioElement = document.getElementById('myAudio');
+              audioElement.play();
+          });
+      </script>
+
+
+
+      <!-- 房间门 -->
+  <a href="unclehome2.html" class="button2"></a>
+  <div class="black-screen" id="black-screen"></div>
+
+<!--地图-->
+  <button id="toggleTextBtn" class="button3"></button>
+  <p id="myText">这是我们居民楼的地图.....</p>
+
+  <script>
+      document.getElementById('toggleTextBtn').addEventListener('click', function() {
+          var textElement = document.getElementById('myText');
+          if (textElement.style.display === 'none') {
+              textElement.style.display = 'block';
+          } else {
+              textElement.style.display = 'none';
+          }
+      });
+  </script>
+
+  <button id="startDialogButton" class="button4"></button>
+
+  <div id="gameDialog" class="dialog">
+      <div id="dialogContent"></div>
+  </div>
+
+  <script>
+  var dialogues = [
+      "：这有好多爷爷一家的合照呢",
+      "欸，这是什么？",
+      "提示：获得一份死亡证明和一封信",
+      "信件：“亲爱的，你和女儿在天国还好吗？当年我们本可以过着幸福美满的生活的....",
+      "谁知战争的来袭导致我们的家园被毁，也因此夺去了你们的生命。",
+      "我在外抗战时收到了这个恶讯，令我十分悲痛。我一直很懊悔当时的我没法保护你们。",
+      "我很想你们，但愿你们在天国一切安好...”",
+      "什么东西掉地上了？",
+  ];
+
+  // 当前显示的对话索引
+  var currentDialogIndex = 0;
+  var dialogComplete = false;
+
+  function showDialog(text) {
+    var dialog = document.getElementById('gameDialog');
+    var content = document.getElementById('dialogContent');
+    content.textContent = text;
+    dialog.style.display = 'block';
+
+}
+
+function startDialog() {
+    if (dialogComplete) {
+        return;
+    }
+
+    var displayNextDialog = function() {
+        if (currentDialogIndex < dialogues.length) {
+            showDialog(dialogues[currentDialogIndex]);
+            currentDialogIndex++;
+
+            if (currentDialogIndex < dialogues.length) {
+                setTimeout(displayNextDialog, 4000);
+            } else {
+                setTimeout(closeDialog, 2000);
+            }
+        }
+    };
+
+    displayNextDialog();
+}
+
+function closeDialog() {
+    var dialog = document.getElementById('gameDialog');
+    dialog.style.display = 'none';
+    dialogComplete = true;
+    currentDialogIndex = 0;
+}
+
+document.getElementById('startDialogButton').addEventListener('click', startDialog);
+
+  </script>
+
+
+  <!-- 日历按钮 -->
+  <button onclick="showImageModal()" class="button5"></button>
+
+  <!-- 图片弹窗 -->
+  <div id="imageModal">
+    <div id="imageModal-content">
+      <span id="close" onclick="hideImageModal()">&times;</span>
+      <img id="modalImage" src="日历.png" alt="图片">
+    </div>
+  </div>
+
+  <script>
+  // 显示图片弹窗
+  function showImageModal() {
+    document.getElementById("imageModal").style.display = "block";
+  }
+
+  // 隐藏图片弹窗
+  function hideImageModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+  </script>
+
+<!-- 地图按钮 -->
+<button id="showImageButton1" class="button6"></button>
+
+<!-- 弹窗结构 -->
+<div id="imageModal1">
+    <div id="imageModalContent1">
+        <span id="closeModal1">&times;</span>
+        <img id="myImage1" src="map.png" alt="Your Image">
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var showImageButton1 = document.getElementById('showImageButton1');
+        var imageModal1 = document.getElementById('imageModal1');
+        var closeModal1 = document.getElementById('closeModal1');
+
+        showImageButton1.addEventListener('click', function() {
+            imageModal1.style.display = 'block';
+        });
+
+        closeModal1.addEventListener('click', function() {
+            imageModal1.style.display = 'none';
+        });
+
+        // 点击弹窗外部也关闭弹窗
+        window.onclick = function(event) {
+            if (event.target == imageModal1) {
+                imageModal1.style.display = 'none';
+            }
+        }
+    });
+</script>
+
+
+
+    </body>
+    </html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大叔家</title>
+
+        <style>
+  body  {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height:100%;
+      background-image: url('大叔家.jpg');
+      background-size:70% auto;
+      background-position: var(--bg-x, center) var(--bg-y, center);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+          }
+
+      .button2 {
+            position: absolute;
+            top: 44.9%;
+            left: 58%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0);
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 150px;
+            height: 270px;
+        }
+
+        #myImage {
+            display: none;
+        }
+
+        .dialog2 {
+                display: none;
+                position: fixed;
+                top: 90%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #f9f9f9;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                z-index: 1000;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 50px;
+                padding: 10px;
+            }
+            .show-dialog2 {
+                display: block;
+            }
+
+            .button3 {
+                  position: absolute;
+                  top: 35%;
+                  left:77%;
+                  background-color: rgba(255, 255, 255, 0);
+                  color: black;
+                  padding: 10px 20px;
+                  text-decoration: none;
+                  border: 2px solid transparent;
+                  border-radius: 2px;
+                  cursor: pointer;
+                  width: 75px;
+                  height: 88px;
+              }
+
+              .dialog3 {
+                      display: none;
+                      position: fixed;
+                      top: 90%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      background-color: #f9f9f9;
+                      border: 1px solid #ccc;
+                      border-radius: 10px;
+                      z-index: 1000;
+                      justify-content: center;
+                      align-items: center;
+                      flex-direction: column;
+                      height: 50px;
+                      padding: 10px;
+                  }
+                  .show-dialog3 {
+                      display: block;
+                  }
+
+                  .button4 {
+                        position: absolute;
+                        top: 64%;
+                        left: 76.5%;
+                        background-color: rgba(255, 255, 255, 0);
+                        color: black;
+                        text-decoration: none;
+                        border: 2px solid transparent;
+                        border-radius: 30px;
+                        cursor: pointer;
+
+                    }
+
+              .button5 {
+                      position: fixed;
+                      top: 72%;
+                      left:68%;
+                      background-color: rgba(255, 255, 255, 0);
+                      color: black;
+                      padding: 10px 20px;
+                      text-decoration: none;
+                      border: 2px solid transparent;
+                      border-radius: 2px;
+                      cursor: pointer;
+                      width: 150px;
+                      height: 90px;
+                  }
+
+            .confirm-button {
+                      position: absolute;
+                      bottom: 10px;
+                      right: 10px;
+                    }
+  </style>
+</head>
+
+<body id="body">
+  <!-- 女儿卧室门 -->
+      <a href="daughterbedroom2.html" class="button2"></a>
+      <div class="black-screen" id="black-screen"></div>
+
+  <!-- 触发对话的按钮 -->
+<button onclick="toggleDialog()" class="button3"></button>
+
+<!-- 对话框 -->
+<div id="gameDialog2" class="dialog2">
+    <p id="dialogContent2">遗照：这应该是蒂亚戈爷爷的妻子和...孩子</p>
+</div>
+<script>
+function toggleDialog() {
+    var dialog2 = document.getElementById('gameDialog2');
+    if (dialog2.style.display === 'none') {
+
+        dialog2.style.display = 'block';
+    } else {
+        /
+        dialog2.style.display = 'none';
+    }
+}
+</script>
+
+<!-- 触发对话的按钮 -->
+<button onclick="toggleDialog1()" class="button4"></button>
+
+<!-- 对话框 -->
+<div id="gameDialog3" class="dialog3">
+  <p id="dialogContent3">香炉：被打翻了....</p>
+</div>
+<script>
+function toggleDialog1() {
+  var dialog3 = document.getElementById('gameDialog3');
+  if (dialog3.style.display === 'none') {
+
+      dialog3.style.display = 'block';
+  } else {
+      
+      dialog3.style.display = 'none';
+  }
+}
+</script>
+
+    <!-- 过道 -->
+        <a href="corrindor.html" class="button5"></a>
+        <div class="black-screen" id="black-screen"></div>
+</body>
+</html>

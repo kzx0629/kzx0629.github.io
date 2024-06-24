@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>仓库</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1024px;
+            height: 768px;
+            background-image: url('仓库.png');
+            background-size: cover;
+            background-position: var(--bg-x, center) var(--bg-y, center);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .button4 {
+            width: 220px;
+            height: 110px;
+            top: 40%;
+            left: 680px;
+            cursor: pointer;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .draggable {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            cursor: move;
+        }
+
+        .black-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1000;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="black-screen" id="black-screen"></div>
+    <button class="button4" id="button4" onclick="redirectToNewPage()" disabled></button>
+
+    <img src="1.png" class="draggable" style="top: 160px; left: 660px;" id="draggable1">
+    <img src="2.png" class="draggable" style="top: 200px; left: 550px;" id="draggable2">
+    <img src="3.png" class="draggable" style="top: 280px; left: 900px;" id="draggable3">
+    <img src="4.png" class="draggable" style="top: 350px; left: 700px;" id="draggable4">
+    <img src="5.png" class="draggable" style="top: 370px; left: 850px;" id="draggable5">
+    <img src="6.png" class="draggable" style="top: 380px; left: 720px;" id="draggable6">
+
+    <script>
+        function redirectToNewPage() {
+            window.location.href = 'newpage.html';
+        }
+
+        let isDragging = false;
+        let currentElement;
+        let offsetX, offsetY;
+
+        document.querySelectorAll('.draggable').forEach(item => {
+            item.addEventListener('mousedown', function(e) {
+                isDragging = true;
+                currentElement = e.target;
+                offsetX = e.clientX - currentElement.getBoundingClientRect().left;
+                offsetY = e.clientY - currentElement.getBoundingClientRect().top;
+                currentElement.style.cursor = 'grabbing';
+            });
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (isDragging && currentElement) {
+                currentElement.style.left = `${e.clientX - offsetX}px`;
+                currentElement.style.top = `${e.clientY - offsetY}px`;
+            }
+        });
+
+        document.addEventListener('mouseup', function() {
+            if (isDragging && currentElement) {
+                isDragging = false;
+                currentElement.style.cursor = 'move';
+                checkButtonVisibility();
+            }
+        });
+
+        function checkButtonVisibility() {
+            const button = document.getElementById('button4');
+            const buttonRect = button.getBoundingClientRect();
+            let isCovered = false;
+
+            document.querySelectorAll('.draggable').forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (
+                    rect.left < buttonRect.right &&
+                    rect.right > buttonRect.left &&
+                    rect.top < buttonRect.bottom &&
+                    rect.bottom > buttonRect.top
+                ) {
+                    isCovered = true;
+                }
+            });
+
+            button.disabled = isCovered;
+        }
+
+        checkButtonVisibility();
+    </script>
+</body>
+</html>
