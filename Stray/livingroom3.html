@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!-- 可以获取手电筒，进入房间 -->
+<head>
+    <meta charset="utf-8">
+    <title>客厅</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1024px;
+            height: 768px;
+            background-image: url('livingroom2.jpg');
+            background-size: cover;
+            background-position: var(--bg-x, center) var(--bg-y, center);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .button2 {
+            position: absolute;
+            top: 43%;
+            left: 64%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0);
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 150px;
+            height: 400px;
+        }
+
+        .button5 {
+            width: 250px;
+            height: 200px;
+            top: 80%;
+            left: 75%;
+            cursor: help;
+        }
+
+
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            border-radius: 5px;
+        }
+
+        .black-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1000;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- 房间门 -->
+    <a href="room.html" class="button2"></a>
+    <div class="black-screen" id="black-screen"></div>
+
+    <button class="button button5" onclick="showPopup('出去的门被锁住了，需要找到*钥匙*')"></button>
+
+
+    <script>
+        function showPopup(message) {
+            alert(message);
+        }
+
+        function goToNewPage() {
+            window.location.href = 'livingroom3.html';
+        }
+    </script>
+</body>
+</html>

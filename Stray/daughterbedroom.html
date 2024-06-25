@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>女儿房间</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('女儿房间锁上.jpg');
+        background-size: 70% auto;
+        background-position: var(--bg-x, center) var(--bg-y, center);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .content {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .button1 {
+        position: absolute;
+        top: 41%;
+        right: 23%;
+        background-color: rgba(255, 255, 255, 0);
+        color: black;
+        padding: 10px 20px;
+        text-decoration: none;
+        border: 2px solid transparent;
+        border-radius: 50px;
+        cursor: pointer;
+        width: 80px;
+        height:80px;
+            }
+
+            .button2 {
+              position: absolute;
+              top: 84%;
+              left: 22%;
+              transform: translateY(-50%);
+              background-color: rgba(255, 255, 255, 0.5);
+              color: black;
+              padding: 10px 20px;
+              text-decoration: none;
+              border-radius: 5px;
+              cursor: pointer;
+              width: 100px;
+              height: 70px;
+                }
+
+      .button3 {
+          position: absolute;
+          top: 36.5%;
+          left: 43%;
+          transform: translateY(-50%);
+          background-color: rgba(255, 255, 255, 0);
+          color: black;
+          padding: 10px 20px;
+          text-decoration: none;
+          border-radius: 60px;
+          border:none;
+          cursor: pointer;
+          width: 200px;
+          height: 150px;
+              }
+
+      #myText {
+          display: none;
+          position: absolute;
+          top: 23%;
+          left: 44%;
+              }
+
+              .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 2;
+                top: 2;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0,0,0,0.0);
+              }
+
+              /* 模态弹窗内容样式 */
+              .modal-content {
+                background-color: #f9f9f9;
+                margin: 30% auto;
+                padding: 10px;
+                border: 1px solid #888;
+                border-radius: 10px;
+                width: 30%;
+                height:15%;
+              }
+              /* 关闭按钮样式 */
+              .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+              }
+              .close:hover,
+              .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+              }
+
+              .button4 {
+                    position: absolute;
+                    top: 50%;
+                    left:26%;
+                    background-color: rgba(255, 255, 255, 0);
+                    color: black;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    border: 2px solid transparent;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    width: 90px;
+                    height: 108px;
+                }
+
+                /* 初始时隐藏图片弹窗 */
+                #imageModal {
+                  display: none;
+                  position: fixed;
+                  z-index: 1;
+                  left: 0;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  overflow: auto;
+                  background-color: rgba(0, 0, 0, 0);
+
+                }
+
+                #imageModal-content {
+                  background-color: rgba(255, 255, 255, 0.5);
+                  margin: 10% auto; /
+                  padding: 10px;
+                  max-width: 40%;
+                  max-height: 50%;
+                }
+
+                /* 图片样式 */
+              #imageModal-content img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                display: block;
+                margin: auto;
+              }
+
+                /* 关闭按钮样式 */
+                #close {
+                  color: #aaa;
+                  float: right;
+                  font-size: 28px;
+                  font-weight: bold;
+                  cursor: pointer;
+                }
+
+                #close:hover,
+                #close:focus {
+                  color: black;
+                  text-decoration: none;
+                  cursor: pointer;
+                }
+
+                .button5 {
+                      position: absolute;
+                      top: 36%;
+                      left:37.5%;
+                      background-color: rgba(255, 255, 255, 0);
+                      color: black;
+                      padding: 10px 20px;
+                      text-decoration: none;
+                      border: 2px solid transparent;
+                      border-radius: 2px;
+                      cursor: pointer;
+                      width: 60px;
+                      height: 60px;
+                  }
+    </style>
+    </head>
+    <body id="body">
+      <button id="playAudioBtn" class="button1"></button>
+
+      <!-- 隐藏音频元素，只通过按钮控制播放 -->
+      <audio id="myAudio" style="display: none;" controls>
+          <source src="女儿录音.mp3" type="audio/mpeg">
+      </audio>
+
+      <script>
+          document.getElementById('playAudioBtn').addEventListener('click', function() {
+              var audioElement = document.getElementById('myAudio');
+              audioElement.play();
+          });
+      </script>
+
+      <!-- 房间门 -->
+  </div>
+  <a href="unclehome.html" class="button2"></a>
+  <div class="black-screen" id="black-screen"></div>
+
+<!--地图-->
+  <button id="toggleTextBtn" class="button3"></button>
+  <p id="myText">这是我们居民楼的地图.....</p>
+
+  <script>
+      document.getElementById('toggleTextBtn').addEventListener('click', function() {
+          var textElement = document.getElementById('myText');
+          if (textElement.style.display === 'none') {
+              textElement.style.display = 'block';
+          } else {
+              textElement.style.display = 'none';
+          }
+      });
+  </script>
+
+  <!-- 保险柜的按钮 -->
+  <button id="openModalBtn" class="button4"></button>
+
+  <!-- 模态弹窗的结构 -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 style="font-size:22px;">请输入密码：提示：女儿生日(dd/mm)</h2>
+      <input type="password" id="passwordInput" placeholder="输入密码">
+      <button onclick="checkPasswordInModal()">确认</button>
+      <div id="messageBox"></div>
+    </div>
+  </div>
+  <script>
+  const modal = document.getElementById('modal');
+
+  const openModalBtn = document.getElementById('openModalBtn');
+
+  const span = document.getElementsByClassName("close")[0];
+
+  function showModal() {
+    modal.style.display = "block";
+  }
+
+  function hideModal() {
+    modal.style.display = "none";
+  }
+
+  openModalBtn.onclick = showModal;
+
+  span.onclick = hideModal;
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      hideModal();
+    }
+  }
+
+  function checkPasswordInModal() {
+    const passwordInput = document.getElementById('passwordInput');
+    const password = passwordInput.value;
+    const correctPassword = "0418";
+    const messageBox = document.getElementById('messageBox');
+
+    if (password === correctPassword) {
+        messageBox.textContent = '密码正确，成功获取道具！';
+        // 这里添加页面跳转的代码
+        window.location.href = 'daughterbedroom2.html';
+
+        passwordInput.value = '';
+
+    } else {
+        messageBox.textContent = '密码不正确，请重新输入！';
+    }
+}
+  </script>
+
+  <!-- 日历按钮 -->
+  <button onclick="showImageModal()" class="button5"></button>
+
+  <!-- 图片弹窗 -->
+  <div id="imageModal">
+    <div id="imageModal-content">
+      <span id="close" onclick="hideImageModal()">&times;</span>
+      <img id="modalImage" src="日历.png" alt="图片">
+    </div>
+  </div>
+
+  <script>
+  function showImageModal() {
+    document.getElementById("imageModal").style.display = "block";
+  }
+
+  function hideImageModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+  </script>
+
+    </body>
+    </html>
