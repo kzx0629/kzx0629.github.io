@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>客厅</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1024px;
+            height: 768px;
+            background-image: url('livingroom2.jpg');
+            background-size: cover;
+            background-position: var(--bg-x, center) var(--bg-y, center);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .button5 {
+            width: 250px;
+            height: 200px;
+            top: 80%;
+            left: 75%;
+            cursor: pointer;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .black-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1000;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="black-screen" id="black-screen"></div>
+    <button class="button5" onclick="redirectToNewPage()"></button>
+
+    <script>
+        function redirectToNewPage() {
+            window.location.href = '走廊.html';
+        }
+    </script>
+</body>
+</html>
