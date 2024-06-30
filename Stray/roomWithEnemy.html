@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有人来了</title>
+    <link rel="stylesheet" href="scripts\styles.css">
+    <link rel="stylesheet" href="scripts\roomWithEnemy.css">
+    <script src="scripts\helper.js"></script>
+    <script src="scripts\roomWithEnemy.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="overlay"></div>
+        <img src="img/room.jpg" draggable="false">
+        
+        <div class="button-container momButtonS" onclick="momButtons()">
+            <button class="button momButtonS mom1"></button>
+            <button class="button momButtonS mom2"></button>
+            <button class="button momButtonS mom3"></button>
+        </div>
+
+        <div class="button-container hideButtonS" onclick="hideButtonS()">
+            <button class="button hideButtonS closet"></button>
+            <button class="button hideButtonS bed"></button>
+        </div>
+
+        <audio id="myAudio" style="display: none;" controls onplay="" onended="
+        setTimeout(()=>{showDialog2('人好像走开了...',5)},1500)
+        setTimeout(()=>{localStorage.setItem('sequenceFlag','justEnded');window.location.href='room.html'},2500)
+        ">
+            <source src="step.mp3" type="audio/mpeg">
+        </audio>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.button.mainroomDoorButton {
+    top: 197px;
+    left: 31px;
+    padding: 94px 47px;
+}
+.button.doctorroomDoorButton {
+    top: 199px;
+    left: 381px;
+    padding: 94px 47px;
+}
+.button.ruinS{
+    border: 2px dashed #0314251e;
+}
+.button.ruinS.ruins1 {
+    top: 350px;
+    left: 135px;
+    padding: 30px 79px;
+    border-radius: 27px;
+}
+.button.ruinS.ruins2 {
+    top: 322px;
+    left: 226px;
+    padding: 33px 8px;
+    border-radius: 49px;
+}
+.button.ruinS.ruins3 {
+    top: 296px;
+    left: 296px;
+    padding: 50px 23px;
+    border-radius: 8px;
+    rotate: 9deg;
+}
+
+.stoolZone.doctorroom {
+    top: 388px;
+    left: 383px;
+    padding: 13px 44px;
+    border-radius: 9px;
+}
+
+.stoolZone.mainroom {
+    top: 387px;
+    left: 35px;
+    padding: 13px 44px;
+    border-radius: 9px;
+}

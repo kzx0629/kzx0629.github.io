@@ -54,18 +54,31 @@
             z-index: 1000;
             transition: opacity 0.3s;
         }
+        .button.end{
+            position: absolute;
+    border: 2px dashed #03142586;
+    background-color: transparent;
+    content: '';
+    cursor: pointer;
+    top: 394px;
+    left: 552px;
+    padding: 49px 95px;
+    z-index: 1;
+        }
     </style>
 </head>
 <body>
     <div class="black-screen" id="black-screen"></div>
     <button class="button4" id="button4" onclick="redirectToNewPage()" disabled></button>
 
-    <img src="1.png" class="draggable" style="top: 160px; left: 660px;" id="draggable1">
-    <img src="2.png" class="draggable" style="top: 200px; left: 550px;" id="draggable2">
-    <img src="3.png" class="draggable" style="top: 280px; left: 900px;" id="draggable3">
-    <img src="4.png" class="draggable" style="top: 350px; left: 700px;" id="draggable4">
-    <img src="5.png" class="draggable" style="top: 370px; left: 850px;" id="draggable5">
-    <img src="6.png" class="draggable" style="top: 380px; left: 720px;" id="draggable6">
+    <img src="1.png" class="draggable" style="top: 160px; left: 660px; z-index: 10;" id="draggable1">
+    <img src="2.png" class="draggable" style="top: 200px; left: 550px; z-index: 10;" id="draggable2">
+    <img src="3.png" class="draggable" style="top: 280px; left: 900px; z-index: 10;" id="draggable3">
+    <img src="4.png" class="draggable" style="top: 350px; left: 700px; z-index: 10;" id="draggable4">
+    <img src="5.png" class="draggable" style="top: 370px; left: 850px; z-index: 10;" id="draggable5">
+    <img src="6.png" class="draggable" style="top: 380px; left: 720px; z-index: 10;" id="draggable6">
+    <button class="button end" onclick="location.href='grandparoom.html'"></button>
+    
 
     <script>
         function redirectToNewPage() {

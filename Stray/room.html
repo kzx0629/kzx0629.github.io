@@ -1,91 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>房间</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            width: 1024px;
-            height: 768px;
-            background-image: url('room.jpg');
-            background-size: cover;
-            background-position: var(--bg-x, center) var(--bg-y, center);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .button1 {
-            position: absolute;
-            top: 43%;
-            left: 100px;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0);
-            color: black;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 150px;
-            height: 400px;
-            border: none;
-        }
-
-
-        .button3 {
-          position: absolute;
-          top: 58%;
-          left: 290px;
-          transform: translateY(-50%);
-          background-color: rgba(255, 255, 255, 0);
-          color: black;
-          padding: 10px 20px;
-          text-decoration: none;
-          border-radius: 5px;
-          cursor: pointer;
-          width: 400px;
-          height: 150px;
-          border: none;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="scripts\styles.css">
+    <link rel="stylesheet" href="scripts\room.css">
+    <script src="scripts\helper.js"></script>
+    <script src="scripts\room.js"></script>
 </head>
 <body>
-    <a href="gameover.html" class="button1" title="躲到柜子里！！"></a>
-    <div class="black-screen" id="black-screen"></div>
+    <div class="container">
+        <img src="img/room.jpg" draggable="false">
+        
+        <div class="button-container momButtonS" onclick="momButtons()">
+            <button class="button momButtonS mom1"></button>
+            <button class="button momButtonS mom2"></button>
+            <button class="button momButtonS mom3"></button>
+        </div>
 
-    <a href="room1.html" class="button3" title="躲到床底下！！ "></a>
-    <div class="black-screen" id="black-screen"></div>
+        <div class="button-container mainroomButtonS" onclick="mainroomButtonS()">
+            <button class="button mainroomButtonS mainroom1"></button>
+            <button class="button mainroomButtonS mainroom2"></button>
+        </div>
 
+        <button class="button foodButton" onclick="food()"></button>
+        <button class="button closetButton" onclick="closetButton()"></button>
+        <button class="button bedButton" onclick='showDialog2("床上也全是土...")'></button>
 
-    <script>
-        window.onload = function() {
-            alert('听到了脚步声！妈妈说过，如果遇到了危险的人，一定要躲起来！');
-            playAudio();
-        }
-
-        function playAudio() {
-            var audio = document.getElementById('audio');
-            audio.play();
-
-            audio.onended = function() {
-                window.location.href = "gameover.html";
-            }
-        }
-
-        function showPopup(message) {
-            alert(message);
-        }
-
-        function redirectToLivingRoom() {
-            window.location.href = "livingroom.html";
-        }
-    </script>
+        <button class="button picFrameButton" onclick="showPopupWithImage('','img/pic/room.png','')"></button>
 </body>
 </html>

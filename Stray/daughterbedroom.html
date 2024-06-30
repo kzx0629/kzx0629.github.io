@@ -49,17 +49,17 @@
 
             .button2 {
               position: absolute;
-              top: 84%;
-              left: 22%;
-              transform: translateY(-50%);
-              background-color: rgba(255, 255, 255, 0.5);
-              color: black;
-              padding: 10px 20px;
-              text-decoration: none;
-              border-radius: 5px;
-              cursor: pointer;
-              width: 100px;
-              height: 70px;
+    top: 72%;
+    left: 21%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 0px 3px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    height: 70px;
                 }
 
       .button3 {
@@ -219,7 +219,7 @@
 
       <!-- 房间门 -->
   </div>
-  <a href="unclehome.html" class="button2"></a>
+  <a href="grandparoom.html" class="button2"></a>
   <div class="black-screen" id="black-screen"></div>
 
 <!--地图-->
@@ -283,8 +283,7 @@
 
     if (password === correctPassword) {
         messageBox.textContent = '密码正确，成功获取道具！';
-        // 这里添加页面跳转的代码
-        window.location.href = 'daughterbedroom2.html';
+        localStorage.setItem("getKey",'true')
 
         passwordInput.value = '';
 

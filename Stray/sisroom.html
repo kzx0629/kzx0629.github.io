@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="scripts\styles.css">
+    <link rel="stylesheet" href="scripts\sisroom.css">
+    <script src="scripts\helper.js"></script>
+    <script src="scripts\sisroom.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="img\sisroom.jpg" draggable="false">
+        <button class="button grandparoomButton" onclick="location.href='grandparoom.html'"></button>
+
+        <button class="button rabbit" onclick="document.getElementById('myAudio').play()"></button>
+        <audio id="myAudio" style="display: none;" controls>
+            <source src="女儿录音.mp3" type="audio/mpeg">
+        </audio>
+
+        <button class="button rabbit" onclick="document.getElementById('myAudio').play()"></button>
+        <button class="button picFrameButton" onclick="showPopupWithImage('','img/pic/sisroom.png','')"></button>
+        <button class="button safes" id="openModalBtn" onclick="showModal()"></button>
+
+        <button class="button calender" onclick="showPopupWithImage('','img/stuff/calender.png','')"></button>
+
+        <div id="normal" class="normal" style="display:'block'">
+            <div class="normal-content">
+              <span class="close">&times;</span>
+              <h2 style="font-size:22px;">请输入密码：提示：女儿生日(dd/mm)</h2>
+              <input type="password" id="passwordInput" placeholder="输入密码">
+              <button onclick="checkPasswordInModal()">确认</button>
+              <div id="messageBox"></div>
+            </div>
+          </div>
+          <script>
+          const normal = document.getElementById('normal');
+          const openModalBtn = document.getElementById('openModalBtn');
+        
+          const span = document.getElementsByClassName("close")[0];
+        
+          function showModal() {
+            normal.style.display = "block";
+          }
+        
+          function hideModal() {
+            normal.style.display = "none";
+          }
+        
+          openModalBtn.onclick = showModal();
+        
+          span.onclick = hideModal();
+        
+          window.onclick = function(event) {
+            if (event.target == normal) {
+              hideModal();
+            }
+          }
+        
+          function checkPasswordInModal() {
+            const passwordInput = document.getElementById('passwordInput');
+            const password = passwordInput.value;
+            const correctPassword = "0418";
+            const messageBox = document.getElementById('messageBox');
+        
+            if (password === correctPassword) {
+                messageBox.textContent = '密码正确，成功获取道具！';
+        
+                passwordInput.value = '';
+        
+            } else {
+                messageBox.textContent = '密码不正确，请重新输入！';
+            }
+        }
+          </script>
+    </div>
+
+</body>
+</html>

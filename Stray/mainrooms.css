@@ -1,0 +1,133 @@
+.button.bathroomDoorButton {
+    top: 152px;
+    left: 45px;
+    padding: 117px 56px;
+}
+.button.bedroomDoorButton {
+    top: 154px;
+    left: 507px;
+    padding: 116px 56px;
+}
+
+.button.picFrameButton {
+    top: 180px;
+    left: 254px;
+    padding: 25px 22px;
+    transform: skew(-22deg, +22deg);
+}
+
+
+.button.treeButtonS {
+    border: 2px dashed #0314251e;
+}
+.button.treeButtonS.tree1 {
+    top: 256px;
+    left: 365px;
+    padding: 7px 34px;
+    transform: skew(22deg, -22deg);
+}
+.button.treeButtonS.tree2 {
+    top: 257px;
+    left: 400px;
+    padding: 6px 29px;
+    transform: skew(-22deg, +61deg);
+}
+.button.treeButtonS.tree3 {
+    top: 161px;
+    left: 429px;
+    padding: 86px 15px;
+}
+.button.treeButtonS.tree4 {
+    top: 205px;
+    left: 466px;
+    padding: 19px 3px;
+    transform: skew(-50deg, +241deg);
+}
+.button.treeButtonS.tree5 {
+    top: 197px;
+    left: 500px;
+    padding: 25px 6px;
+    transform: skew(22deg, +0deg);
+}
+.button.treeButtonS.tree6 {
+    top: 245px;
+    left: 466px;
+    padding: 13px 1px;
+    transform: skew(-50deg, +241deg);
+}
+.button.treeButtonS.tree7 {
+    top: 248px;
+    left: 491px;
+    padding: 32px 6px;
+    transform: skew(10deg, +0deg);
+}
+.button.treeButtonS.tree8 {
+    top: 293px;
+    left: 469px;
+    padding: 13px 1px;
+    transform: skew(-50deg, +241deg);
+}
+
+.button.sofaButtonS {
+    border: 2px dashed #0314251e;
+}
+.button.sofaButtonS.sofa1 {
+    top: 288px;
+    left: 236px;
+    padding: 54px 91px;
+}
+.button.sofaButtonS.sofa2 {
+    top: 338px;
+    left: 211px;
+    padding: 29px 13px;
+}
+.button.sofaButtonS.sofa3 {
+    top: 344px;
+    left: 412px;
+    padding: 24px 13px;
+}
+
+.button.dadButtonS {
+    border: 2px dashed #70040413;
+}
+.button.dadButtonS.dad1 {
+    top: 319px;
+    left: 595px;
+    padding: 58px 33px;
+    rotate: 30deg;
+    border-radius: 49px;
+}
+.button.dadButtonS.dad2 {
+    top: 291px;
+    left: 643px;
+    padding: 19px 13px;
+    rotate: 30deg;
+    border-radius: 49px;
+}
+.button.dadButtonS.dad3 {
+    top: 404px;
+    left: 585px;
+    padding: 45px 16px;
+    rotate: 28deg;
+    border-radius: 49px;
+}
+.button.dadButtonS.dad4 {
+    top: 379px;
+    left: 556px;
+    padding: 45px 16px;
+    rotate: 63deg;
+    border-radius: 49px;
+}
+
+.button.clockButton {
+    top: 195px;
+    left: 160px;
+    padding: 97px 24px;
+}
+
+.button.flashlightButton {
+    top: 254px;
+    left: 689px;
+    border: 2px dashed #0314251e;
+    padding: 12px 25px;
+}
