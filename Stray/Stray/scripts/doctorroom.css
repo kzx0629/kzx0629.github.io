@@ -1,0 +1,133 @@
+
+.button.corridorButton {
+    top: 449px;
+    left: 40px;
+    padding: 43px 57px;
+    z-index: 2;
+}
+.stoolZone.corridor {
+    top: 457px;
+    left: 48px;
+    padding: 35px 48px;
+    border-radius: 9px;
+    z-index: 1;
+}
+
+.button.brokendoor{
+    border: 2px dashed #0314251e;
+}
+.button.brokendoor.door1 {
+    top: 153px;
+    left: 44px;
+    padding: 116px 56px;
+}
+.button.brokendoor.door2 {
+    top: 154px;
+    left: 508px;
+    padding: 115px 55px;
+}
+
+.button.metalButtonS{
+    border: 2px dashed #0314251e;
+}
+.button.metalButtonS.button1 {
+    top: 144px;
+    left: 323px;
+    padding: 10px 37px;
+    border-radius: 3px 9px 9px 2px;
+}
+.button.metalButtonS.button2 {
+    top: 176px;
+    left: 318px;
+    padding: 32px 9.7px;
+    border-radius: 9px;
+}
+.button.metalButtonS.button3 {
+    top: 170px;
+    left: 343px;
+    padding: 28.7px 37px;
+    border: 2px dashed #031425
+    
+}
+.button.metalButtonS.button4 {
+    top: 145px;
+    left: 431px;
+    padding: 47px 32px;
+    border-radius: 0px 0px 40px 40px;
+}
+
+.medicine{
+    /* padding: 10px 100px; */
+    background-color: transparent; /* 透明背景 */
+    position: absolute;
+    content: '';
+    z-index: 1000;
+    top: 10px;
+    transform: scale(0.55);
+    display: none;
+    
+    border: 2px dashed #03142565;
+}
+
+.medicine.books1{
+    top: 258px;
+    left: 173px;
+    background: url(../img/stuff/books1.jpg) no-repeat;
+    padding: 19px 31px;
+}
+.medicine.bottle1{
+    top: 187px;
+    left: 272px;
+    background: url(../img/stuff/bottle1.jpg) no-repeat;
+    padding: 31px 20px;
+}
+.medicine.stuffs1{
+    top: 289px;
+    left: 214px;
+    background: url(../img/stuff/stuffs1.jpg) no-repeat;
+    padding: 23px 58px;
+}
+.medicine.stuffs2{
+    top: 325.2px;
+    left: 220px;
+    background: url(../img/stuff/stuffs2.jpg) no-repeat;
+    padding: 40px 54px;
+}
+
+.stoolZone.medicines {
+    top: 397px;
+    left: 188px;
+    padding: 12px 58px;
+    border-radius: 9px;
+    z-index: 1;
+}
+.stoolZone.notes {
+    top: 402px;
+    left: 618px;
+    padding: 12px 37px;
+    border-radius: 9px;
+    z-index: 1;
+}
+.button.note{
+    top: 219px;
+    left: 626px;
+    padding: 25px 23.5px;
+}
+
+.notE {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-family: FZShuTi;
+    color: #8B0000;
+    z-index: 1000;
+    }

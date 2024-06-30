@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="scripts\styles.css">
+    <link rel="stylesheet" href="scripts\corridor.css">
+    <script src="scripts\helper.js"></script>
+    <script src="scripts\corridor.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="img\corridor.jpg" draggable="false">
+        <button class="button mainroomDoorButton" onclick="location.href='index.html'"></button>
+        <button class="button doctorroomDoorButton" onclick="location.href='doctorroom.html'"></button>
+
+        <div class="button-container ruinS" onclick="showDialog2('从上面掉下来的...最好还是别靠近了吧。')">
+            <button class="button ruinS ruins1"></button>
+            <button class="button ruinS ruins2"></button>
+            <button class="button ruinS ruins3"></button>    
+
+        </div>
+
+        <img src="img/stuff/stool.png" draggable="false" class="draggable" id="draggable">
+        <script src="scripts\corridorStool.js"></script>
+
+        <button class="stoolZone doctorroom" id="doctorroom"></button>
+        <button class="stoolZone mainroom" id="mainroom"></button>
+
+
+    </div>
+
+</body>
+</html>

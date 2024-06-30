@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="scripts\styles.css">
+    <link rel="stylesheet" href="scripts\grandparoom.css">
+    <script src="scripts\helper.js"></script>
+    <script src="scripts\grandparoom.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="img\grandparoom.jpg" draggable="false">
+        <div class="button-container grandpaButtonS" onclick="grandpaButtons()">
+            <button class="button grandpaButtonS grandpa1"></button>
+        </div>
+        <button class="button corridorButton" onclick="corridorButton()"></button>
+        <button class="button sisroomButton" onclick="sisroomButton()"></button>
+
+        <button class="button censers" onclick="showDialog2('香炉被打翻了...')"></button>
+        <button class="button picFrameButton" onclick="showPopupWithImage('','img/pic/grandparoom.png','')"></button>
+
+    </div>
+
+</body>
+</html>

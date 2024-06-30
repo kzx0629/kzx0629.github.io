@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>房间</title>
+    <link rel="stylesheet" href="scripts\styles.css">
+    <link rel="stylesheet" href="scripts\room.css">
+    <script src="scripts\helper.js"></script>
+    <script src="scripts\room.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="img/room.jpg" draggable="false">
+        
+        <div class="button-container momButtonS" onclick="momButtons()">
+            <button class="button momButtonS mom1"></button>
+            <button class="button momButtonS mom2"></button>
+            <button class="button momButtonS mom3"></button>
+        </div>
+
+        <div class="button-container mainroomButtonS" onclick="mainroomButtonS()">
+            <button class="button mainroomButtonS mainroom1"></button>
+            <button class="button mainroomButtonS mainroom2"></button>
+        </div>
+
+        <button class="button foodButton" onclick="food()"></button>
+        <button class="button closetButton" onclick="closetButton()"></button>
+        <button class="button bedButton" onclick='showDialog2("床上也全是土...")'></button>
+
+        <button class="button picFrameButton" onclick="showPopupWithImage('','img/pic/room.png','')"></button>
+</body>
+</html>

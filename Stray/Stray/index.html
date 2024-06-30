@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="scripts\styles.css">
+    <link rel="stylesheet" href="scripts\mainrooms.css">
+    <script src="scripts\helper.js"></script>
+    <script src="scripts\mainrooms.js"></script>
+</head>
+<body>
+    <div id="overlay">
+        <div id="text">Paloma de la paz</div>
+    </div>
+    <div class="container">
+        <img src="img/mainroom.jpg" draggable="false">
+        <button class="button bathroomDoorButton" onclick="bathroomDoorButton()"></button>
+        <button class="button bedroomDoorButton" onclick="bedroomDoorButton()"></button>
+        <button class="button picFrameButton" onclick="showPopupWithImage('','img/pic/mainroom.png','')"></button>
+        
+        <div class="button-container treeButtonS" onclick="showDialog2('这是我们家的树。')">
+            <button class="button treeButtonS tree1"></button>
+            <button class="button treeButtonS tree2"></button>
+            <button class="button treeButtonS tree3"></button>
+            <button class="button treeButtonS tree4"></button>
+            <button class="button treeButtonS tree5"></button>
+            <button class="button treeButtonS tree6"></button>
+            <button class="button treeButtonS tree7"></button>
+            <button class="button treeButtonS tree8"></button>
+        </div>
+        
+        <div class="button-container sofaButtonS" onclick="showDialog2('沙发上积满了落下来的土...')">
+        <button class="button sofaButtonS sofa1"></button>
+        <button class="button sofaButtonS sofa2"></button>
+        <button class="button sofaButtonS sofa3"></button>
+        </div>
+
+        <button class="button clockButton" onclick="showDialog2('时钟停在了九点五十...')"></button>
+
+        <div class="button-container dadButtonS" onclick="dadButtons()">
+            <button class="button dadButtonS dad1"></button>
+            <button class="button dadButtonS dad2"></button>
+            <button class="button dadButtonS dad3"></button>
+            <button class="button dadButtonS dad4"></button>
+        </div>
+
+        <button class="button flashlightButton" onclick="flashlightButton()"></button>
+
+        <img src="img/stuff/stool.png" draggable="false" class="draggable" id="draggable">
+        <script src="scripts\mainroomStool.js"></script>
+
+        <button class="stoolZone flashlight" id="flashlight"></button>
+
+        <button class="button corridorButton" onclick="corridorButton()"></button>
+        <button class="stoolZone corridor" id="corridor"></button>
+
+    </div>
+
+</body>
+</html>

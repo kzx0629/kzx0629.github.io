@@ -1,0 +1,34 @@
+.button.grandpaButtonS {
+    border: 2px dashed #7004041e;
+    z-index: 1001;
+}
+.button.grandpaButtonS.grandpa1 {
+    top: 405px;
+    left: 192px;
+    padding: 29px 62px;
+    rotate: -17deg;
+    border-radius: 18px;
+}
+
+.button.corridorButton {
+    top: 430px;
+    left: 604px;
+    padding: 47px 71px;
+}
+.button.sisroomButton {
+    top: 152px;
+    left: 504px;
+    padding: 116px 63px;
+}
+.button.censers {
+    top: 360px;
+    left: 684px;
+    padding: 28px 32px;
+    border-radius: 10px;
+    border: 2px dashed #70040413;
+}
+.button.picFrameButton {
+    top: 209px;
+    left: 708px;
+    padding: 34px 26px;
+}

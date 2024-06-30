@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卫生间</title>
+    <link rel="stylesheet" href="scripts\styles.css">
+    <link rel="stylesheet" href="scripts\bathroom.css">
+    <script src="scripts\helper.js"></script>
+    <script src="scripts\bathroom.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="img/bathroom.jpg" draggable="false">
+        <img src="img/stuff/stool.png" draggable="false" class="draggable" id="draggable">
+        <script src="scripts\bathroomStool.js"></script>
+
+        <button class="button mainroomDoorButton" onclick="mainroomDoorButton()"></button>
+        <button class="button closetButton" onclick="closetButton()"></button>
+
+        <button class="stoolZone mainroom" id="mainroom"></button>
+        <button class="stoolZone sink" id="sink"></button>
+        <button class="stoolZone window" id="window"></button>
+    </div>
+
+</body>
+</html>

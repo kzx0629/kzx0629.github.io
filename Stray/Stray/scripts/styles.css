@@ -1,0 +1,91 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #292929;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 3s;
+    opacity: 1;
+}
+
+#text {
+    color: #fff;
+    font-size: 2em;
+}
+
+.container {
+    position: relative;
+    color: #000;
+    background-color: #292929;
+    user-select: none;
+}
+
+.container img {
+    display: block;
+    width: 800px; /* 固定宽度 */
+    height: 600px; /* 固定高度 */
+    user-select: none;
+}
+
+.button {
+    position: absolute;
+    padding: 10px 20px;
+    border: 2px dashed #03142586; /* 添加虚线边框 */
+    background-color: transparent; /* 透明背景 */
+    content: ''; /* 必须设置内容为空，否则伪元素不会显示 */
+    cursor: pointer;
+}
+
+.blurred {
+    filter: blur(2px); /* 模糊效果 */
+}
+
+.dialog {
+    /* display: none; */
+    position: fixed;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px;
+    background-color: #f0f0f0;
+    border: 3px solid #000;
+    border-radius: 10px;
+    border-color: white;
+    z-index: 1000;
+}
+
+.draggable {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    max-width: 60px;
+    max-height: 60px;
+    cursor: grab;
+    z-index: 1001;
+}
+
+.stoolZone {
+    position: absolute;
+    padding: 10px 20px;
+    border: 2px dashed #03142586; /* 添加虚线边框 */
+    background-color: transparent; /* 透明背景 */
+    content: ''; /* 必须设置内容为空，否则伪元素不会显示 */
+    display: none;
+}
+

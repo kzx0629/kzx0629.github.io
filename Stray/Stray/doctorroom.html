@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="scripts\styles.css">
+    <link rel="stylesheet" href="scripts\doctorroom.css">
+    <script src="scripts\helper.js"></script>
+    <script src="scripts\doctorroom.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="img\doctorroom.jpg" draggable="false">
+        <button class="button corridorButton" onclick="corridorButton()"></button>
+
+        <button class="button brokendoor door1" onclick="showDialog2('门已经坏了，打不开了...')"></button>
+        <button class="button brokendoor door2" onclick="showDialog2('里面已经塌陷了...')"></button>
+        
+        <div class="button-container metalButtonS">
+            <button class="button metalButtonS button1" onclick="showDialog2('好多奖章啊...')"></button>
+            <button class="button metalButtonS button2" onclick="showDialog2('好多奖章啊...')"></button>
+            <button class="button metalButtonS button3" onclick="showPopupWithImage('','img/pic/doctorroom.png','','50%')"></button>
+            <button class="button metalButtonS button4" onclick="showDialog2('我见过有人给医生姐姐送这个，姐姐可高兴了！')"></button>
+        </div>
+        
+        <img src="img/stuff/stool.png" draggable="false" class="draggable" id="draggable">
+        <script src="scripts\doctorroomStool.js"></script>
+
+        <button class="stoolZone corridor" id="corridor"></button>
+        <button class="stoolZone medicines" id="medicines"></button>
+        <button class="stoolZone notes" id="notes"></button>
+
+            <button src="img/stuff/bottle1.jpg" draggable="false" class="medicine bottle1" id="bottle1" onclick="bottle1Button() /* document.getElementById('bottle1').style.display='none' */">
+            <button src="img/stuff/books1.jpg" draggable="false" class="medicine books1" id="books1" onclick="document.getElementById('books1').style.display='none'">
+            <button src="img/stuff/stuffs1.jpg" draggable="false" class="medicine stuffs1" id="stuffs1" onclick="document.getElementById('stuffs1').style.display='none'">
+            <button src="img/stuff/stuffs2.jpg" draggable="false" class="medicine stuffs2" id="stuffs2" onclick="document.getElementById('stuffs2').style.display='none'">
+        
+        <button class="button note" onclick="noteButton()"></button>
+
+        <div id="gameNote" class="notE" onclick="document.getElementById('gameNote').style.display='none'">
+            <div class="note-content" id="noteContent"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

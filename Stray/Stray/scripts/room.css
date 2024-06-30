@@ -1,0 +1,61 @@
+.button.momButtonS {
+    border: 2px dashed #70040413;
+    z-index: 1001;
+}
+.button.momButtonS.mom1 {
+    top: 455px;
+    left: 516px;
+    padding: 22px 73px;
+    rotate: -16deg;
+    border-radius: 20px;
+}
+.button.momButtonS.mom2 {
+    top: 448px;
+    left: 447px;
+    padding: 21px 44px;
+    rotate: 4deg;
+    border-radius: 14px;
+}
+.button.momButtonS.mom3 {
+    top: 448px;
+    left: 497px;
+    padding: 32px 27px;
+    rotate: -34deg;
+    border-radius: 49px;
+}
+
+
+.button.mainroomButtonS.mainroom1 {
+    top: 503px;
+    left: 593px;
+    padding: 26px 74px;
+}
+.button.mainroomButtonS.mainroom2 {
+    top: 456px;
+    left: 671px;
+    padding: 49.6px 35px;
+}
+
+.button.foodButton {
+    top: 278px;
+    left: 542px;
+    padding: 13px 35px;
+}
+
+.button.closetButton {
+    top: 172px;
+    left: 58.2px;
+    padding: 106px 54px;
+}
+.button.bedButton {
+    top: 313px;
+    left: 172.5px;
+    padding: 40px 100px;
+    border: 2px dashed #0314251e;
+}
+.button.picFrameButton {
+    top: 95px;
+    left: 175.5px;
+    padding: 67px 49px;
+    rotate: 4deg;
+}
